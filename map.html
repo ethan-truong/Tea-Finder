@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tea Finder</title>
+	<link type="text/css" rel="stylesheet" href="css/MainPage.css"/>
+	<link type="text/css" rel="stylesheet" href="css/bootstrap-3.3.7-dist 2/css/bootstrap.min.css"/>
+	<script type="text/javascript" src="js/MainPage.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<!--Fonts-->
+		<link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Great Vibes" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+	<!---->
+	<link rel="icon" type="image/png" href="images/Favicon.png">
+</head>	
+<body>
+	<div id="sidebar" style="z-index: 3;">
+		<div class="content-wrapper-add">
+			<br>
+			<div id="sidebar-title">
+				<h5>Add Your Own Tea Shop!</h5>
+			</div>
+			<hr>
+			<hr>
+			<div>
+				<div class="input-group">
+					<div class="input-group-children">
+						<p>Tea Shop Name:</p> 
+						<input class="form-control" id="inputbar" type="text" placeholder="Enter Tea Shop Name...">
+						<p>Location:</p> 
+						<input class="form-control" id="inputbar" type="text" placeholder="Enter Address...">
+						<button class="btn" id="Submit-Tea-Shop" type="submit">Add Tea Shop</button>
+					</div>
+					<p class="Tea-Shop-Submit">Thank you for submitting your tea shop information to Tea Finder!</p>
+					<button class="btn" id="Submit-Another-Tea-Shop" type="submit">Add Another Tea Shop</button>
+				</div>
+			</div>
+			<div id="contact">
+				<p>
+					<em>We will try our best to include your tea shop on Tea Finder!</em>
+					<em>If you have any questions, email us at <a>TeaFinder@gmail.com</a></em>
+
+				</p>
+			</div>
+			<img src="images/TeaFinder_Logo.png" id="logo" style="height: 6.25em; margin: auto; margin-top: -0.3125em;" />
+			<hr style="margin: auto; margin-top: 1.125em;"">
+			<button class="btn btn-success Add-Tea-Shop" id="Return-Tea-Shop" type="submit">Search for More Tea</button>
+		</div>
+		<div class="content-wrapper-main">
+			<button class="btn" id="close">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</button>
+			<br>
+			<div id="sidebar-title">
+				<h5>SETTINGS</h5>
+			</div>
+			<hr>
+			<hr>
+			<div>
+				<div class="input-group">
+					<p>Search:</p> 
+					<input class="form-control" id="searchbar" type="text" placeholder="Tea Shop or Location...">
+					<button class="btn btn-info" class="submit" onclick="search(document.getElementById('searchbar').value)">Search</button>
+				</div>
+			</div>
+			<hr style="margin-bottom: 1em; margin-top: 1em;">
+			<div id="Top-100-Preview" style="background-color: #F7E1F0; border-radius: 2%">
+				<p>Our Recommendations</p>
+				<table class="table table-condensed">
+					<thead><tr><th>#</th><th>Tea Shop</th></tr></thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+			<img src="images/TeaFinder_Logo.png" id="logo" style="height: 5.625em;"/dd>
+			<hr style="margin-top: 0.15625em;">
+			<button class="btn btn-success Add-Tea-Shop" id="Go-Add-Tea" type="submit">Add Your Own Tea Shop</button>
+		</div>
+	</div>
+	<div id="open"><img src="https://s3.amazonaws.com/user-media.venngage.com/b216ffb25e5d71d5753b063c1a5463e4.png"/></div>
+	<div id="map"></div>
+	<script asyync defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhCJJk2S4pk0Dl_WBjbP45VCtl5EBOTNk&callback=initMap"></script>
+</body>
+</html>
