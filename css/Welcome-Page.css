@@ -14,7 +14,7 @@ body {
 	position: absolute;
 	width: 850px;
 	z-index: 8;
-	top: 7.5%;
+	top: 2.5%;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -26,9 +26,9 @@ body {
 	color: black;
 	font-weight: 200;
 	font-size: 7.5em;
-	height: 2em;
+	height: 2.5em;
 	position: relative;
-	left: 20%;
+	left: 12.5%;
 }
 
 #Tea-Finder h3 {
@@ -36,7 +36,7 @@ body {
 	text-align: center;
 	font-weight: 300;
 	font-size: 2em;
-	margin-top: 0;
+	margin-top: -1em;
 }
 
 #Tea-Finder button {
