@@ -18,14 +18,6 @@ function initMap() {
 
 }
 
-var shops = [
-  [1,'Pekoe', 37.314618, -121.790132],
-  [1,'Cool Tea Bar', 37.308860, -121.813203],
-  [1,'Cafe La Tea', 37.323423, -122.012072],
-  [1,'Soyful Desserts', 37.331770, -121.856734]
-];
-
-
 $(document).ready(function() {
     $.ajax({
         type: "GET",
