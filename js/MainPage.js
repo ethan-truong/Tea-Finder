@@ -18,18 +18,23 @@ $(document).ready(function() {
 	});
 	$("#Submit-Tea-Shop").click(function() {
 		$(".input-group-children").children().fadeTo(500, 0.1);
-		$(".Tea-Shop-Submit").fadeIn(500);
-		$("#Submit-Another-Tea-Shop").fadeIn(500);
+		$(".Tea-Shop-Submit").fadeToggle(500);
+		$("#Submit-Another-Tea-Shop").fadeToggle(500);
+	});
+	$("#Submit-Another-Tea-Shop").click(function() {
+		$(".Tea-Shop-Submit").fadeToggle(500);
+		$("#Submit-Another-Tea-Shop").fadeToggle(500);
+		$(".input-group-children").children().fadeTo(500, 1);
 	});
 	$(".Add-Tea-Shop").click(function() {
 		var wrappers = ['.content-wrapper-main', '.content-wrapper-add'];
 		if (i == 0) {
-			fadeWrapper(wrappers[i]);
-			fadeWrapper(wrappers[i + 1]);
+			fadeWrapper(wrappers[i], 500);
+			fadeWrapper(wrappers[i + 1], 500);
 			i = 1;
 		} else {
-			fadeWrapper(wrappers[i]);
-			fadeWrapper(wrappers[i - 1]);
+			fadeWrapper(wrappers[i], 500);
+			fadeWrapper(wrappers[i - 1], 500);
 			i = 0;
 		}
 	});
@@ -42,12 +47,12 @@ function fillMainTable(reviewList) {
 	for (var i = 0; i < lastIndex; i++) {
 		var $tr = document.createElement("tr");
 		$($tr).addClass(colors[i]);
-		$($tr).css('border-radius', '2%');
 		$($tr).append("<td>" + (i + 1) + "</td><td>" + reviewList[i] + "</td>");
 		$("#Top-100-Preview table").append($tr);
 	}
 }
 
-function fadeWrapper(wrapper) {
-	$(wrapper).fadeToggle(500);
+function fadeWrapper(wrapper, t) {
+	$(wrapper).fadeToggle(t);
 }
+
