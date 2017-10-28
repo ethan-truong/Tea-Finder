@@ -5,16 +5,12 @@ body {
 	margin: 0;
 }
 
-div {
-	display: none;
-}
-
 #welcome-page {
-	display: none;
 	z-index: 5;
 }
 
 #Tea-Finder {
+	display: none;
 	position: absolute;
 	width: 850px;
 	z-index: 8;
@@ -48,11 +44,12 @@ div {
 	top: 20px;
 	border-radius: 0px;
 	margin: auto;
-	left: 325px;
+	left: 345px;
 	font-weight: 300;
 	height: 50px;
 	width: 150px;
 	box-shadow: 1px 1px 5px #888888;
+	background-color: #0E9B49;
 }
 
 .background {

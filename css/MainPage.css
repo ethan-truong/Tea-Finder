@@ -265,9 +265,12 @@ hr {
 }
 
 #open img {
+	position: absolute;
 	height: 5em;
 	width: 5em;
 	z-index: 1;
+	top: 30%;
+	right: 15%;
 }
 
 #logo {
