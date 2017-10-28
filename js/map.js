@@ -6,15 +6,27 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 var map;
 function initMap() {
 
-  var bayArea = {lat: 37.2201560, lng: -121.9782780};
+  var bayArea = {lat: 37.8272, lng: -122.2913};
+
+
 
 
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
+    zoom: 10,
     center: new google.maps.LatLng(bayArea),
     mapTypeId: 'roadmap'
   }
   );
+
+if (navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(function (position) {
+         initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+         map.setCenter(initialLocation);
+         map.setZoom(15);
+     });
+ }
+
+
 }
 
 var shops = [];
