@@ -15,8 +15,10 @@ function initMap() {
     mapTypeId: 'roadmap'
   }
   );
-
 }
+
+var shops = [];
+
 
 $(document).ready(function() {
     $.ajax({
@@ -71,4 +73,3 @@ function setMarkers(map) {
     });
   }
 }
-
