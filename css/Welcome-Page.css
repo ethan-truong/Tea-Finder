@@ -18,27 +18,29 @@ div {
 	position: absolute;
 	width: 850px;
 	z-index: 8;
-	top: 22.5%;
+	top: 7.5%;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
+	font-family: 'Comfortaa', cursive;
 }
 
 #Tea-Finder img {
 	color: black;
-	text-align: center;
 	font-weight: 200;
 	font-size: 7.5em;
 	height: 2em;
-	margin: auto;
+	position: relative;
+	left: 20%;
 }
 
 #Tea-Finder h3 {
 	color: black;
 	text-align: center;
 	font-weight: 300;
-	font-size: 3em;
+	font-size: 2em;
+	margin-top: 0;
 }
 
 #Tea-Finder button {
