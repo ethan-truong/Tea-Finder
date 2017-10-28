@@ -5,6 +5,10 @@ body {
 	margin: 0;
 }
 
+div {
+	display: none;
+}
+
 #welcome-page {
 	display: none;
 	z-index: 5;
@@ -14,12 +18,10 @@ body {
 	position: absolute;
 	width: 850px;
 	z-index: 8;
-
 	top: 25%;
 	bottom: 0;
 	left: 0;
 	right: 0;
-
 	margin: 0 auto;
 }
 
@@ -27,12 +29,14 @@ body {
 	color: black;
 	text-align: center;
 	font-weight: 200;
+	font-size: 7.5em;
 }
 
 #Tea-Finder h3 {
 	color: black;
 	text-align: center;
 	font-weight: 300;
+	font-size: 3em;
 }
 
 #Tea-Finder button {
@@ -44,5 +48,15 @@ body {
 	font-weight: 300;
 	height: 50px;
 	width: 150px;
-	box-shadow: 1px 1px 5px #888888
+	box-shadow: 1px 1px 5px #888888;
 }
+
+.background {
+	position: absolute;
+	height: 100%; 
+	width: 100%; 
+	z-index: 6; 
+	top: 0;
+}
+
+
