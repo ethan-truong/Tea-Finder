@@ -27,6 +27,35 @@ if (navigator.geolocation) {
  }
 
 
+  var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+          
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        var uluru = {lat: -25.363, lng: 131.044};
+
+   var marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+
+
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+
+
+
+
 }
 
 var shops = [];
@@ -83,5 +112,19 @@ function setMarkers(map) {
       icon: 'images/marker.png',
       title: shop[0]
     });
+
+
+
+var infowindow = new google.maps.InfoWindow();  
+google.maps.event.addListener(marker, 'mouseover', (function(marker) {  
+           return function() {  
+               var content = shop[0];  
+               infowindow.setContent(content);  
+               infowindow.open(map, marker);  
+           }  
+         })(marker));  
+
+
+
   }
 }
